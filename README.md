@@ -2,7 +2,7 @@ CoalEvol generates samples of nucleotide, codon and amino acid sequences, contem
 
 CoalEvol implements a large set of parametrical and empirical substitution models at all nucleotide, codon and amino acid levels.
 
-To download CoalEvol I recommend use the Chrome browser. Then go to releases and click on the desired files (CoalEvol-7.3.5.zip; do not download Source code files because they only include a readme).
+
 
 Citation
 
