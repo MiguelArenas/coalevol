@@ -11,4 +11,4 @@ Arenas M, Posada D. 2014. Simulation of Genome-wide Evolution under Heterogeneou
 
 Help
 
-Please, do not hesitate to contact us (miguelmmmab@gmail.com) for any question. 
+Please, do not hesitate to contact us (marenas@uvigo.es) for any question. 
