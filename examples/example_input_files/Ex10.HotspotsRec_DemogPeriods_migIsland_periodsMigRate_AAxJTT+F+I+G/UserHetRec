@@ -1,0 +1,10 @@
+[Hotspots recombination][options and comments within brackets are ignored]
+
+[hotspot recombination rate] [k0] k1.1e-4
+[expected # Poisson hotspots] h1.1
+[fixed #hotspots] [q4]
+[hotspot imprecision] v0
+[hotspot width] m10
+[hotspot heterogeneity] t1.5
+[hotspot interference] [z1]
+
