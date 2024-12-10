@@ -1,0 +1,95 @@
+[PARAMETERS FILE FOR CoalEvol7.4.0][options and comments within brackets are ignored]
+
+
+[*** GENERAL SETTINGS ***]
+[number of replicates (mandatory)] n2
+
+
+[*** EVOLUTIONARY HISTORY ***]
+[** COALESCENT SIMULATIONS **]
+[general settings]	[sample size (#gametes); alignment length (bp, codon or aa)] s8 150
+	[effective population size; Haploid/Diploid (1 or 2)] e1000 2
+
+[longitudinal sampling]
+	[dated tips] [=4 1995 1 1 2003 4 6 1997 2 3 2001 7 10]	[generation time] [/1200]
+
+[demographics]	[exponential growth rate] g0 2.3e-03	[demographic periods] [g1 3 1000 500 50 500 600 100 600 300 30]
+	[demographics in species/population tree - constant population sizes] [g2 7 1000 500 900 800 1300 1000 700]
+	[demographics in species/population tree - variable population sizes] [g3 7 1000 1200 500 600 900 1000 100 200 800 900 2000 1900 900]
+
+[migration models; species/population tree]	[island model] 			[q1 4 2 2 3 1]
+	[stepping-stone model] 		[q2 4 2 2 3 1]
+	[island-continent model] 	[q3 4 5 1 1 1]
+	[migration rate]		[t1 0.002]
+	[species/population tree] 	[%3 1 2 500 3 4 700 5 6 900]
+
+[recombination]	[homogeneous recombination rate] [r1.6e-6] r7.3e-6	[fixed # rec events] [w2]
+	[hotspots recombination] [hUserHetRec]
+
+[rate of evolution, others]	[substitution rate] [u4.95e-6] u2.1e-4
+	[outgroup] o0.1
+
+[** INPUT TREE/S FILE **]
+[input tree/s file]	[ptreefile]
+
+
+
+[*** SUBSTITUTION MODEL ***]
+[nucleotide substitution]       	[base frequencies 1x4]	[f4 0.35 0.17 0.23 0.25]
+				[f0 4 4 
+				0.5 0.35 0.15 0.2 0.3 
+				0.25 0.25 0.25 0.27 0.23 
+				0.15 0.5 0.15 0.15 0.20 
+				0.10 0.15 0.15 0.30 0.20]	[ti/tv] 		[v1 0.5] v1 2.5	[R-matrix (v6)] 	[v6 1.0 0.5 0.1 0.3 1.7 0.5]
+	[NR-matrix (v12)] 	[v12 0.1 0.2 0.3 0.4 0.9 0.6 0.9 0.8 0.9 0.1 0.2 0.3]
+[codon substitution]
+	[base frequencies 3x4] 	f12 0.1 0.4 0.3 0.2 0.45 0.35 0.15 0.05 0.3 0.25 0.35 0.1
+				[f0 12 3 
+				0.5 0.1 0.4 0.3 0.2 0.4 0.4 0.1 0.1 0.3 0.3 0.3 0.1 
+				0.2 0.1 0.3 0.3 0.2 0.4 0.4 0.1 0.1 0.3 0.2 0.4 0.1
+				0.3 0.1 0.3 0.3 0.2 0.4 0.04 0.1 0.1 0.3 0.3 0.4 0.7]
+
+	[- GY94 codon model (with dN/dS heterogeneous models) -]	[M0 model (constant dN/dS)]                   	m1 1.0	[user-given categories]                       	[m2 3 0.2 0.2 2.4 0.3 1.0 0.5]
+	[M1 model (neutral): p0 omg0]           	[m3 0.9 0.4]   	[M5 model (discr gamma): cat a b]    		[m4 4 0.78 1.4]	[M5 model (cont gamma): a b]  			[m5 0.91 1.00]
+	[M6 model (cont 2gamma): p0 a0 b0; a1(=b1)]	[m6 0.5 5 3 0.54]
+	[M7 model (cont beta): p q]   			[m7 0.322 0.485]   	[M8 model (cont beta&omg): p0 p q; omg1]  	[m8 0.70 5.1 3.1 2.10]
+	[M9 model (cont beta&gamma): p0 p q; a b]	[m9 0.80 5.5 3.3 1.9 3.8]
+	[M10 model (cont beta&gamma+1): p0 p q; a b]	[m10 0.60 2.5 1.3 0.9 0.8]
+	[M0-M10 GY94 + amino acid constrains: Blosum62, CpRev, Dayhoff, DayhoffDCMUT, HIVb, HIVw, JTT, JonesDCMUT, LG, Mtart, Mtmam, Mtrev24, RtRev, VT, WAG, UserEAM] _WAG
+	[variable dN/dS per branch]
+		[for model M0 (constant dN/dS per site) (m1 must be selected above)]			
+			[user-given categories]		[l1 3 0.1 0.2 3.4 0.3 1.1 0.5]
+			[cont gamma]			[l2 0.91 1.00]
+			[cont beta]			[l3 0.32 0.48]
+		[for all M1-M10 models (m2-m10 must be selected above)]	[l4]
+
+	[- MG94 codon model -]
+	[MG94: synRate non-synRate]                  	[m0 0.70 1.90]
+	[- HB codon model: HBcodonModel -] 		
+	[HB: amino acid frequencies]			[m20 20 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06]
+							[m20 0 3 
+							0.4 0.05 0.05 0.07 0.03 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06 
+							0.2 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.02 0.08 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06 
+							0.4 0.03 0.07 0.05 0.05 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.06 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06]
+	[- Empirical codon models: ECMrest, ECMunrest, ECMSchn2005, UserECM] 	[zECMSchn2005]
+
+[amino acid substitution]
+	[amino acid frequencies 1x20] 	[f20 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06]
+					[f0 20 3 
+					0.5 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.04 0.06 
+					0.4 0.05 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.07
+					0.1 0.01 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.03 0.07 0.04 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.01]
+	[- Empirical model: Blosum62, CpRev, Dayhoff, DayhoffDCMUT, HIVb, HIVw, JTT, JonesDCMUT, LG, Mtart, Mtmam, Mtrev24, RtRev, VT, WAG, UserEAM] [@UserEAM]
+
+[general parameters]
+	[rate heterogeneity among sites (alpha, +G)] a1 0.75	[invariable sites (+I)] 		i0.52	[input file GMRCA] 			[xseqGMRCA]
+
+
+[*** OUTPUTS ***]
+	[print sequences file]				bsequences
+	[sequences file options: phylip/fasta/nexus (1-3); multiple aligment files (0-1); ancestral states (0-1)] c1 1 0	[print sumMRCA/GMRCA] 				[$]
+	[print trees] 					jtrees	[print times] 					ktimes
+	[print network] 				*NetworkFile	[print breakpoints] 				dbreakpoints	[print simulated omegas per site/branch]	[+]
+
+
+[*** OTHER SETTINGS ***]	[seed]	#2	[noisy]	y2		[		 noisy = 0: just replicate number.		 noisy = 1: + run settings. 		 noisy = 2: + calculation status and event information. 		 noisy = 3: + print ancestral status for each sequence at each event + MRCA and the demes evolution.		 noisy = 4: + gi's and Gi, recombinant fragments process, demes evolution.		]
