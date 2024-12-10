@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.7">
+  <style type="text/css">
+    p.p3 {margin: 0.0px 0.0px 6.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Courier; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p10 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Courier; -webkit-text-stroke: #000000}
+    p.p11 {margin: 0.0px 0.0px 12.0px 0.0px; font: 12.0px Courier; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px Times; text-decoration: underline ; font-kerning: none; color: #000bcc; -webkit-text-stroke: 0px #000bcc}
+  </style>
+</head>
+<body>
+<h1 style="margin: 0.0px 0.0px 16.0px 0.0px; font: 24.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>CoalEvol 7.4.0 README</b></span></h1>
+<h3 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 14.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>8 December 2024</b></span></h3>
+<p class="p3"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Purpose</b></span></h2>
+<p class="p5"><span class="s1">CoalEvol simulates coding DNA, noncoding DNA and amino acid sequences with complex recombination, migration and demographics. The file <i>CoalEvol7.4.0.manual.pdf</i> includes detailed documentation, and the user is strongly advised to read it carefully before using the program.</span></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Download and Installation</b></span></h2>
+<p class="p6"><span class="s1">Download the program fom <a href="http://code.google.com/p/coalevol/"><span class="s2">http://code.google.com/p/coalevol/</span></a>. Open a console window. In the same directory as the file <i>CoalEvol7.4.0.zip</i>, type:</span></p>
+<p class="p7"><span class="s1">unzip CoalEvol7.4.0.zip</span></p>
+<p class="p6"><span class="s1">You should now see a folder called <i>CoalEvol-7.4.0</i>. Note that this zip file was made on a mac, so in windows or linux you might see some strange files, that start with "." or "-". These are macintosh hidden files, which can be safely removed without affecting the software.</span></p>
+<p class="p5"><span class="s1">Executables for WindowsXP, MacOSX (G5 and Intel processors), and Linux Debian, are available inside the folder <i>exe</i>.</span></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Times; -webkit-text-stroke: #000000"><span class="s1"><b>Compilation</b></span></h2>
+<p class="p6"><span class="s1">The program should compile without much problem in any Unix-like environment (Linux, MacOSX, etc.). A <i>makefile</i> is provided for the <i>gcc</i> compiler, but if you have <i>cc</i> instead, just change <i>gcc</i> for <i>cc</i> in the makefile. The default optimization level is set to <i>-O3</i>. To compile in macintosh with an intel processor, and probably in othe machines, you can enable the option <i>-fast</i> instead.</span></p>
+<p class="p5"><span class="s1">To compile the program move into the folder <i>src</i> inside the <i>CoalEvol-7.4.0</i> folder and type:</span></p>
+<p class="p7"><span class="s1">make all</span></p>
+<p class="p5"><span class="s1">to compile the executable in the current folder (<i>src</i>) inside the <i>CoalEvol-7.4.0</i> folder, or</span></p>
+<p class="p7"><span class="s1">make install</span></p>
+<p class="p5"><span class="s1">to clean, compile and install the new executable in the <i>exe</i> folder inside the <i>CoalEvol-7.4.0</i> folder.</span></p>
+<p class="p5"><span class="s1">The program should compile without problems with a second makefile "Makefile_MPI" for a MPI version. This makefile might need some modifications for particular OS. To compile the program type:</span></p>
+<p class="p7"><span class="s1">make -f Makefile_MPI</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Courier; -webkit-text-stroke: #000000"><span class="s1"><b>Execution</b></span></h2>
+<p class="p8"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1">The program runs in a command-line window. In MacOS X the user needs to open the Terminal application, and in Windows XP the user</span></p>
+<p class="p7"><span class="s1">should open the Command Prompt. To run the program move to the folder where the executable is located and type:</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">./CoalEvol7.4.0</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">in linux and MacOSX, or</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">CoalEvol7.4.0.winxp.exe</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">in WindowsXP.</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1">For execute the parallel version, MPI libraries have to be installed in the host. The minimum number of processors is two. An example of execution in 3 processors is the next:</span></p>
+<p class="p11"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">mpirun -np 3 CoalEvol7.4.0</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p10"><span class="s1">Arguments can be entered in the command line or, more conveniently, from a text file called "<i>parameters</i>" that <b>should be located in the same directory as the executable</b>. See the documentation for further details.</span></p>
+<p class="p11"><span class="s1"></span><br></p>
+<h2 style="margin: 0.0px 0.0px 14.0px 0.0px; font: 18.0px Courier; -webkit-text-stroke: #000000"><span class="s1"><b>Disclaimer</b></span></h2>
+<p class="p8"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p7"><span class="s1"><i>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later<span class="Apple-converted-space"> </span></i></span></p>
+<p class="p7"><span class="s1"><i>version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</i></span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">Miguel Arenas<span class="Apple-converted-space">  </span>- marenas@uvigo.es</span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p7"><span class="s1">David Posada<span class="Apple-converted-space">  </span>- dposada@uvigo.es<span class="Apple-converted-space"> </span></span></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"></span><br></p>
+<p class="p8"><span class="s1"></span><br></p>
+</body>
+</html>
